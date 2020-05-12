@@ -1,0 +1,7 @@
+{
+  "name": "Algorithms_Animations",
+  "version": "1.0.0",
+  "dependencies": {
+    "algorithm-visualizer": "^2.3.7"
+  }
+}
