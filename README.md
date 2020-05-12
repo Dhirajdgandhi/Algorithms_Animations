@@ -4,3 +4,7 @@ This project shows animations of some algorithms
 ### Random Forest
 
 - This folder contains TKinter-based python code that generates an animation that introduces the basic idea of a random forest classifier.
+
+### K-means
+
+- This folder contains algorithms and matlab code for animation that introduce K-means algorithm
