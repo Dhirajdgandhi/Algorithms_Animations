@@ -244,7 +244,7 @@ public class RepeatedAStarSearch{
                         }
 
                         try {
-                            currentThread.sleep(2000);
+                            currentThread.sleep(2500);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

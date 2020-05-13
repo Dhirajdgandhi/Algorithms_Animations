@@ -101,6 +101,7 @@ function probablyPrime(n, k) {
             array2dTracer.depatch(1, 4 );
 
             if (x === 1){
+                print(x);
                 logTracer.println("x is " + x);
                 logTracer.println("Hence Composite");
                 return false;
