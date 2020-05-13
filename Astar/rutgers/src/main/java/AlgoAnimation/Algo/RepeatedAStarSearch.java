@@ -144,11 +144,11 @@ public class RepeatedAStarSearch{
                         String prevText = tileText.getText();
                         tileText.setText((prevText.isEmpty() ? "" : (prevText+","))+String.valueOf(cost));
                         tileText.setFill(Color.BLACK);
-                        try {
-                            currentThread.sleep(50);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+//                            currentThread.sleep(2000);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
 
                         currentNode = stateGridWorld.get(cell);
                     } else {
@@ -227,9 +227,29 @@ public class RepeatedAStarSearch{
                         }
                         LOG.debug("Adding Neighbour to Open List : {}", neighbourNode);
                         openList.add(neighbourNode);
+
                         if(gridWorld.getGridWorld().get(currentNode.getXy().getX()).get(currentNode.getXy().getY()) != BLOCKED_CELL){
                             MainScreen.getCurrentGrid().get(neighbourNode.getXy().getY()).get(neighbourNode.getXy().getX()).changeColor(Color.GREEN);
+                            Text tileText = MainScreen.getCurrentGrid().get(neighbourNode.getXy().getY()).get(neighbourNode.getXy().getX()).getText();
+//                            String newText = new StringBuilder()
+//                                    .append("\nF:")
+//                                    .append(currentNode.getFValue())
+//                                    .append("\nH:")
+//                                    .append(currentNode.getHValue())
+//                                    .append("\nG:")
+//                                    .append(currentNode.getGValue())
+//                                    .toString();
+//                            tileText.setText(newText);
+                            tileText.setFill(Color.BLACK);
                         }
+
+                        try {
+                            currentThread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+
                     }
                 }
             }
